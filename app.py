@@ -61,6 +61,8 @@ def personaje():
     # Definimos el titulo_ubicacion
     titulo_ubicacion = 'Ultima ubicacion conocida'
  
+    return render_template('personaje.html', nombre=nombre, descripcion=descripcion, titulo_ubicacion=titulo_ubicacion, ubicacion=ubicacion, imagen_url=imagen_url)
+
 # Ruta personaje dinamico
 @app.route('/personaje/<id>')
 def personaje_dinamico(id):
