@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lista de personajes</title>
+  </head>
+  <body>
+    <div class="flex flex-wrap">
+      {% for personaje in lista_personajes %}
+      <!--Contenedor-->
+      <div class="w-60 bg-gray-800 text-white rounded-lg mx-auto mt-5">
+        <!--imagen-->
+        <img
+          class="rounded-lg"
+          src="{{ personaje['image'] }}"
+          alt="Un pinguino fachero con traje"
+        />
+        <div class="p-5">
+          <!--nombre-->
+          <a href="/personaje/{{ personaje['id'] }}" class="text-4xl font-bold"
+            >{{ personaje['name'] }}</a
+          >
+          <!--descripcion-->
+          <p>{{ personaje['species'] }}</p>
+          <p>{{ personaje['status'] }}</p>
+          <!--ubicacion titulo-->
+          <p class="font-bold mt-2">Ultima ubicacion conocida</p>
+          <!--ubicacion-->
+          <p>{{ personaje['location']['name'] }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

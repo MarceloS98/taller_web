@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Personaje</title>
+  </head>
+  <body>
+    <!--Contenedor-->
+    <div class="w-60 bg-gray-800 text-white rounded-lg mx-auto mt-5">
+      <!--imagen-->
+      <img
+        class="rounded-lg"
+        src="{{ imagen_url }}"
+        alt="Un pinguino fachero con traje"
+      />
+      <div class="p-5">
+        <!--nombre-->
+        <h2 class="text-4xl font-bold">{{ nombre }}</h2>
+        <!--descripcion-->
+        <p>{{ descripcion }}</p>
+        <!--ubicacion titulo-->
+        <p class="font-bold mt-2">{{ titulo_ubicacion }}</p>
+        <!--ubicacion-->
+        <p>{{ ubicacion }}</p>
+      </div>
+    </div>
+  </body>
+</html>
